@@ -1,0 +1,36 @@
+{
+  "name": "cashback_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -w server -x node ./server/index.js",
+    "migrate-initial": "knex migrate:up 20210205142630_initial.js",
+    "migrate": "knex migrate:up",
+    "rollback": "knex migrate:down",
+    "list-migrations": "knex migrate:list",
+    "new-migration": "knex migrate:make ",
+    "seed": "knex seed:run",
+    "new-seed": "knex seed:make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ephraimpei/cashback_service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ephraimpei/cashback_service/issues"
+  },
+  "homepage": "https://github.com/ephraimpei/cashback_service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.17",
+    "pg": "^8.5.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
